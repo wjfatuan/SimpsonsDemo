@@ -5,41 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CharacterInfoActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/characterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simpsons"
+        android:text="Maggie"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
+    <ImageView
+        android:id="@+id/characterImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/maggie"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/btnBart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bart" />
-
-        <RadioButton
-            android:id="@+id/btnHomer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Homer" />
-    </RadioGroup>
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/characterName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

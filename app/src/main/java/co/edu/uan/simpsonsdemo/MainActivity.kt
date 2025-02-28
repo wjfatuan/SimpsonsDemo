@@ -1,5 +1,6 @@
 package co.edu.uan.simpsonsdemo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -24,15 +25,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnBart.setOnClickListener {
-            changeImage((it as Button).text.toString())
+            goToCharacterInfo((it as Button).text.toString())
         }
         binding.btnHomer.setOnClickListener {
-            changeImage((it as Button).text.toString())
+            goToCharacterInfo((it as Button).text.toString())
         }
     }
 
-    fun changeImage(name: String) {
-        val id = resources.getIdentifier(name.lowercase(), "drawable", packageName)
-        binding.characterImage.setImageResource(id)
+    fun goToCharacterInfo(characterName: String) {
+        val intent = Intent(this, CharacterInfoActivity::class.java)
+        intent.putExtra("characterName", characterName)
+        startActivity(intent)
     }
+
 }

@@ -24,11 +24,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.btnBart.setOnClickListener {
+        binding.btnBart.setOnClickListener { it ->
             goToCharacterInfo((it as Button).text.toString())
         }
-        binding.btnHomer.setOnClickListener {
+        binding.btnHomer.setOnClickListener { it ->
             goToCharacterInfo((it as Button).text.toString())
+        }
+        binding.charactersList.setOnItemClickListener { parent, view, position, id ->
+            println("parent: $parent\n view: $view\n position: $position\n id: $id")
+            val characterName = parent.getItemAtPosition(position) as String
+            goToCharacterInfo(characterName)
         }
     }
 

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">SimpsonsDemo</string>
+    <string name="app_name">App Simpsons</string>
+    <string-array name="characters">
+        <item>Bart</item>
+        <item>Homer</item>
+        <item>Maggie</item>
+    </string-array>
 </resources>

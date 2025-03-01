@@ -2,6 +2,7 @@ package co.edu.uan.simpsonsdemo
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,8 @@ import co.edu.uan.simpsonsdemo.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+
+    val characters = arrayOf("Bart", "Homer", "Maggie")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnHomer.setOnClickListener { it ->
             goToCharacterInfo((it as Button).text.toString())
         }
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, characters)
+        binding.charactersList.adapter = adapter
         binding.charactersList.setOnItemClickListener { parent, view, position, id ->
             println("parent: $parent\n view: $view\n position: $position\n id: $id")
             val characterName = parent.getItemAtPosition(position) as String

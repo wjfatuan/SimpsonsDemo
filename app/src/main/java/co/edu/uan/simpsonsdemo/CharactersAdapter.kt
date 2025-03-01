@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class CharactersAdapter(val ctx: MainActivity, val characters: Array<String>)
+class CharactersAdapter(val ctx: MainActivity, val characters: List<String>)
     : ArrayAdapter<String>(ctx, android.R.layout.simple_list_item_1, characters) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {

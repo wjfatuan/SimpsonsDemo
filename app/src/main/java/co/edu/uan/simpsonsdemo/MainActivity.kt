@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
 
-    val characters = arrayOf("Bart", "Homer", "Maggie")
+    val characters = mutableListOf("Bart", "Homer", "Maggie")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
             println("parent: $parent\n view: $view\n position: $position\n id: $id")
             val characterName = parent.getItemAtPosition(position) as String
             goToCharacterInfo(characterName)
+            addCharacter()
+            adapter.notifyDataSetChanged()
         }
     }
 
@@ -47,6 +49,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CharacterInfoActivity::class.java)
         intent.putExtra("characterName", characterName)
         startActivity(intent)
+    }
+
+    fun addCharacter() {
+        characters.add("Lisa")
     }
 
 }

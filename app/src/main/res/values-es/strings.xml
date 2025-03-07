@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicacion Simpsons</string>
+    <string name="maggie_description">Margaret "Maggie" Simpson, conocida como Maggie Simpson, es un personaje ficticio de la serie de televisión de dibujos animados Los Simpson. Es la tercera hija del matrimonio protagonista, Homer y Marge Simpson, y la más joven de ellos. Sus hermanos mayores son Bart y Lisa Simpson. Siempre se la ve succionando un chupete y cuando camina, suele tropezar con el mono y cae de frente.
+
+Maggie fue creada por el dibujante Matt Groening en el vestíbulo de la oficina de James L. Brooks, para debutar en televisión el 19 de abril de 1987, en el corto Good Night para el programa El show de Tracey Ullman.1​</string>
+    <string-array name="characters">
+        <item>Bart</item>
+    </string-array>
+</resources>

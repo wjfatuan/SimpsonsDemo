@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">App Simpsons</string>
+    <string name="maggie_description">Margaret Lenny "Maggie" Simpson is a fictional character in the animated television series The Simpsons and the youngest member of the Simpson family. She first appeared on television in the Tracey Ullman Show short "Good Night" on April 19, 1987.</string>
     <string-array name="characters">
         <item>Bart</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
